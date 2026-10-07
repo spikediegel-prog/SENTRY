@@ -6,6 +6,38 @@ An executable simulation of defensive barriers, bounded authority, timed human i
 
 **Intended role:** SENTRY is a containment mechanism designed to detect and contain exfiltration and poisoning attempts that pass conventional security controls. Intelligence may identify suspicious activity and propose countermeasures; an independent controller limits consequential responses to pre-authorized actions and records evidence and reconciliation. This is the product's intended purpose, not a claim that the prototype reliably detects real-world attacks missed by other tools. Exfiltration is currently represented by trusted simulated events, and poisoning detection has demonstrated blind spots in synthetic tests.
 
+## Brainstorming enhancements in this prototype
+
+All eight enhancements below are included in this JavaScript prototype as **local experiments**. They were added together directly to `main` in [commit a0717b3](https://github.com/spikediegel-prog/SENTRY/commit/a0717b3752d3d5d27552cbbc4672cc82d5707869); they do not have separate pull-request review records.
+
+| Enhancement | Implemented behavior | Limit |
+| --- | --- | --- |
+| **AI action checkpoint** | Checks simulated read/write/send proposals against fixed scopes, valid leases, uncertainty, access holds, and required permissions | No live AI tool, file, or message integration |
+| **Exfiltration tripwires** | An exact synthetic marker in a send proposal holds the affected session and can trigger timed escalation | No semantic or encoded exfiltration coverage |
+| **Memory quarantine** | Submitted memory starts quarantined; admission requires permitted provenance, content-hash review, and independent signed approval | Finite injection screening has blind spots; approval does not prove content is safe |
+| **Countermeasure rehearsal** | Evaluates advisory challenge/contain candidates against finite attack and legitimate-text examples, recording misses and disruption | No LLM-generated executable defenses or automatic installation |
+| **Incident replay** | Authenticates encrypted journal records against a trusted head/count and matches action intents with reconciliation receipts | Recorded receipts are not independent proof of incident truth |
+| **Containment health checks** | Compares simulated adapter observations with the expected session/action/resource/content; failure closes authority and holds access | No independent production sensor |
+| **Recovery rehearsal** | Requires clean replacement, rotates worker capabilities, preserves access holds, and requires separately authorized incident-bound health checks before release | No durable recovery service, real attestation, or OS sandbox |
+| **Operator dashboard** | Displays an offline interactive snapshot of authority state, provenance, holds, rehearsal results, and authenticated replay | No live countdown or execution controls |
+
+The prototype also includes **expiring, one-use scoped permissions** and **learning provenance/source withdrawal**. Intelligence cannot issue permissions, promote candidates, change the boot policy, or restore its own authority.
+
+These enhancements live in a separate trusted AI-boundary fixture, not a fully integrated production service. See [architecture, limits, and claim classifications](docs/ai-boundary-exploration.md).
+
+Run the focused adversarial proofs and generate the dashboard:
+
+```text
+node --test tests/ai-boundary.test.js
+node src/ai-boundary-demo.js
+```
+
+The recorded full suite passed **104 tests**, including **27 AI-boundary tests**. The finite rehearsal deliberately records both a missed attack and a false alarm; successful assertions do not establish general attack detection or host-compromise resistance. See [validation record](boundary-validation.json).
+
+For the narrower Rust authority core, native Windows/Linux CI, and preserved JavaScript reference, use [SENTRY-External-Testing](https://github.com/spikediegel-prog/SENTRY-External-Testing). Not all JavaScript enhancements have been ported into Rust. Real integrations, production isolation, real attestation, and authenticated durable Rust storage remain **Proposed**.
+
+## Run the original simulations
+
 Requires Node.js 22 or later and Windows with the current user's profile loaded for recoverable key protection. Protected saved artifacts require the separate private vault and that user's profile to decrypt; the ZIP intentionally contains no recovery secrets. From this directory:
 
 ```text
