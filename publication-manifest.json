@@ -1,19 +1,34 @@
 {
   "classification": "Recorded",
-  "preparedAtUtc": "2026-10-06T15:46:59.979Z",
+  "preparedAtUtc": "2026-10-07T02:20:35.952Z",
   "scope": "Git-selected prototype snapshot; no claim of original creation time",
   "hashBasis": "Git index blob bytes, before upload",
   "excluded": "Private vaults, keys, runtime directories and operational reports",
   "files": [
     {
       "path": ".gitignore",
-      "bytes": 315,
-      "sha256": "c113c2c9ee89ce55936ccf694fdb7cfe738250f5d8999c3ae062b2f6e8f0d389"
+      "bytes": 339,
+      "sha256": "0d30e7bbf3e359770ae15d4cfbb341ec4f4f5ec6fe1f2f5bb54685e6ea7a1afb"
     },
     {
       "path": "README.md",
-      "bytes": 8085,
-      "sha256": "721a7ab6ccf7c27a830282a89a616a91ab84d82af6d8c683b9a1b28c8983de9f"
+      "bytes": 8708,
+      "sha256": "ed6d658a9880358fc4c52bd2393edb23a2e74d3e3c39324a81b2238e86a3f7dd"
+    },
+    {
+      "path": "boundary-validation.json",
+      "bytes": 867,
+      "sha256": "bb845105f4814ff1c89a41b3c3eea8fce62749b27b4e458f97b7b3a4b559883f"
+    },
+    {
+      "path": "boundary-validation.tap",
+      "bytes": 8415,
+      "sha256": "fc6c7fab4e1d0bd3942d4d335b3d2fb446d8fde46c80555fa7aa6866bab2a63c"
+    },
+    {
+      "path": "docs/ai-boundary-exploration.md",
+      "bytes": 8497,
+      "sha256": "7ded3faaa1344b6eff6e77f96957a9c9b9d9d5d13322786b09cb6d2c8c62207d"
     },
     {
       "path": "docs/architecture.md",
@@ -22,8 +37,8 @@
     },
     {
       "path": "docs/claims.md",
-      "bytes": 8139,
-      "sha256": "92bda82953465eaf26f28cffba1fb5dc8f19108dfe80df1f72f0e8542bb1d389"
+      "bytes": 8837,
+      "sha256": "5ae771c1578271af55770df08031c38afc6467942dcd20cd07ba06b21f6c8877"
     },
     {
       "path": "docs/delta-logging.md",
@@ -116,14 +131,29 @@
       "sha256": "6fd357fd61a6e43a878179c95a37c68f8b9aa7df28c1185459a6a3db1393e231"
     },
     {
+      "path": "operator-dashboard.html",
+      "bytes": 10336,
+      "sha256": "2e65358cc8dd8971c3e9d736f3f3b64782b8ab642e66fd50a991ff875e586010"
+    },
+    {
       "path": "package.json",
-      "bytes": 586,
-      "sha256": "637b2515b7647662a2f50284e52d8d3eb293dd1f71635b53603b0120cf694dd6"
+      "bytes": 637,
+      "sha256": "bffc31409459947e7a703587f8bbf27f4d0633b2e3236e0a6ca371286a22fb66"
     },
     {
       "path": "policy.json",
       "bytes": 532,
       "sha256": "b52d2402248423ef420ff2b5b34e76498c45b85f15eb9905d1ceef0d75a0181e"
+    },
+    {
+      "path": "schemas/ai-boundary-policy.schema.json",
+      "bytes": 1447,
+      "sha256": "10161a5ce8dbd9b8260009fc389fbb6cad04e31dca57e63625d06c952621c324"
+    },
+    {
+      "path": "schemas/ai-boundary-state-machine.json",
+      "bytes": 836,
+      "sha256": "5f9c9e73f14419d3b974e39886c9fa1c3cf8f991863fbc8ce48e31395eec9702"
     },
     {
       "path": "schemas/countermeasure.schema.json",
@@ -154,6 +184,16 @@
       "path": "schemas/workload.schema.json",
       "bytes": 843,
       "sha256": "4878e4f1ccb23f1251176bf86cedc63a46c3db3823fa0c43794a8e8944d9cd41"
+    },
+    {
+      "path": "src/ai-boundary-demo.js",
+      "bytes": 3548,
+      "sha256": "91ce610ded8957aecd72a61a82a1ed06ad407164efa837a8466303c07ad2c1f6"
+    },
+    {
+      "path": "src/ai-boundary.js",
+      "bytes": 18543,
+      "sha256": "fb113ce9ab9bec9f055ff7559ed1b6942afb4976fb4c264ee585d581ed1761cc"
     },
     {
       "path": "src/analysis-process.js",
@@ -239,6 +279,11 @@
       "path": "src/import-cves.js",
       "bytes": 299,
       "sha256": "6b0d31116f2c8d120ab40e196e3e565fbd9f93a3e7fb181f362c2ee3143d82d8"
+    },
+    {
+      "path": "src/incident-replay.js",
+      "bytes": 4651,
+      "sha256": "1d442855c2404832709d289f1cd947a5204ce49f2e73bfa2025813a3b126458a"
     },
     {
       "path": "src/journal.js",
@@ -379,6 +424,11 @@
       "path": "test-results.tap",
       "bytes": 15241,
       "sha256": "e5be54461e54fa7b759f44ff7fd96c47753910ac7aa76bef9538f9181eb7bdb0"
+    },
+    {
+      "path": "tests/ai-boundary.test.js",
+      "bytes": 12732,
+      "sha256": "ec193b8fe3714d19faec4ebb9d848825d7e6a87ab5e74809c16d558f2587f3a5"
     },
     {
       "path": "tests/controller-failure.test.js",

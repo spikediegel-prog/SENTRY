@@ -6,6 +6,7 @@
   "engines": { "node": ">=22" },
   "scripts": {
     "test": "node --test tests/*.test.js",
+    "ai-boundary": "node src/ai-boundary-demo.js",
     "guardian": "node src/guardian.js",
     "demo": "node src/demo.js",
     "load": "node src/load-demo.js",

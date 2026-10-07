@@ -22,6 +22,8 @@ The demo inserts credential misuse into a noise stream, contains the affected se
 
 ## What exists
 
+The [AI boundary exploration](docs/ai-boundary-exploration.md) adds a separate local fixture for action checks, expiring one-use permissions, synthetic exfiltration tripwires, memory quarantine, learning provenance, finite countermeasure rehearsal, authenticated replay, containment health checks, and recovery exercises. Run `node src/ai-boundary-demo.js` to generate `operator-dashboard.html`, an offline interactive operator snapshot. This fixture is not wired into the existing controller's production interface; no live AI, tool integration, persistent recovery service, or additional process sandbox is implemented.
+
 - Separate controller and SENTRY subprocesses; the supervisor forwards worker requests only to the worker lane.
 - An immutable boot policy, fixed session scope, authenticated observation/human/supervisor lanes, replay counters, and a rotating instance capability.
 - Deterministic junk drop, challenge flags, simulated containment routes, isolation, credential revocation, and case-scoped human cancellation.

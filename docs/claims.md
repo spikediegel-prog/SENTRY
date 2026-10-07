@@ -55,3 +55,7 @@ The protection/countermeasure additions are locally Verified for finite proposal
 | Absence of network adapters reduces immediate consequence of this lab | Inferred | Source inspection; only child-process IPC and local file writes |
 
 Use `node --test tests/*.test.js` and `node src/guardian.js` to refresh the results. A FAIL supersedes the corresponding local Verified assertion until resolved. Proposed/Unknown rows must not be advertised as implemented features.
+
+## Separate AI boundary exploration
+
+See [scope and limitations](ai-boundary-exploration.md). The 27 tests in `tests/ai-boundary.test.js` provide **Verified** local assertions for action scoping, temporary permission expiry/reuse, memory quarantine, provenance withdrawal, intervention holds, recovery-bound health checks, former-worker capability rejection, authenticated replay, evidence failure, and failure of simulated actuator postconditions. Rehearsal misses/false alarms and operator snapshot data are **Recorded**. Live action integrations, isolated service wiring, real sensors and persistent recovery remain **Proposed**. Real-world poisoning/exfiltration coverage remains **Unknown**.
