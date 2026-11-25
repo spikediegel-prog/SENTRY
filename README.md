@@ -1,6 +1,8 @@
 # Barriers by SENTRY — first local proof
 
-An executable simulation of defensive barriers, bounded authority, timed human intervention, and SENTRY self-containment. **No production integration, network mitigation, operating-system sandbox, or general intrusion detection is implemented.** There are no external dependencies or network adapters.
+SENTRY is a practice run for containing a misbehaving AI.
+
+It's a local simulation only — no real firewall, no real network defence, and it doesn't replace the protections you already have. The AI can flag something suspicious, but only a pre-approved response can actually happen, and it's recorded.
 
 **Barriers by SENTRY does not replace traditional firewalls or endpoint security.** It is intended as an additional layer for protecting AI models and governing defensive containment. Existing network and endpoint protections remain necessary; deploying SENTRY is not a reason to disable or remove them. Integration with those protections is proposed, not implemented in this local prototype.
 
